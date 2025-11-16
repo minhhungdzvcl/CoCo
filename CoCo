@@ -1,1 +1,12 @@
-
+•  Công cụ khuyên dùng: Nuitka
+•  Cách hoạt động: Nó đọc code Python của bạn và biến nó thành một file .exe thực thụ, không phải là file nén như PyInstaller.
+•  Cách dùng (Cơ bản):
+1.	Cài đặt: pip install nuitka
+2.	Biên dịch (thay cho PyInstaller):
+Bash
+# --standalone: Gói tất cả thư viện (giống --onefile)
+# --windows-disable-console: Giống --noconsole
+# --enable-plugin=pyqt6: Báo Nuitka gói thư viện PyQt6
+•	# Lệnh Nuitka để tạo ra 1 file .exe duy nhất
+•	
+•	nuitka --onefile --windows-disable-console --enable-plugin=pyqt6 --windows-icon-from-ico=icon.ico none.py
